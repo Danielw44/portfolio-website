@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     minify = require('gulp-clean-css'),
     uglify = require('gulp-uglify'),
     util = require('gulp-util'),
+    ftp = require('vinyl-ftp'),
     rename = require('gulp-rename');
 
 
@@ -47,6 +48,28 @@ var gulp = require('gulp'),
     .pipe(notify({message: 'Task complete innit!'}));
   });
 
+  //FTP
+  gulp.task( 'upload', function () {
+
+    var conn = ftp.create( {
+        host: 'danielworthington.co.uk',
+        user: 'daniel@danielworthington.co.uk',
+        pass: 'daniel_FTP!',
+        log:      util.log
+    } );
+
+    var globs = [
+        'dist/**'
+    ];
+
+    // using base = '.' will transfer everything to /public_html correctly
+    // turn off buffering in gulp.src for best performance
+
+    return gulp.src( globs, { buffer: false } )
+        .pipe( conn.newer( '/public_html' ) ) // only upload newer files
+        .pipe( conn.dest( '/public_html' ) );
+
+} );
 
   //watch
   gulp.task('watch', function() {
