@@ -1,0 +1,44 @@
+@import "vars";
+
+*{
+  box-sizing: border-box;
+}
+
+body,html{
+  margin: 0;
+}
+
+h1{
+  font-family: $secondaryFont;
+  @include margin(0);
+  @include padding(0);
+  font-size: 80px;
+}
+h2{
+  font-family: $secondaryFont;
+  @include margin(0);
+  @include padding(0);
+  font-size: 40px;
+}
+h3{
+
+}
+h4{
+
+}
+p{
+  font-family: $primaryFont;
+  font-weight: 300;
+}
+.site-container{
+  width: 100%;
+  margin: 0 auto;
+  @include position(relative);
+
+  @media #{$tablet}{
+  }
+  @media #{$laptop}{
+  }
+  @media #{$desktop}{
+  }
+}

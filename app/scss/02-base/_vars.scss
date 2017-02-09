@@ -1,0 +1,36 @@
+/* --- Colours --- */
+
+$primaryColor: #343434;
+$secondaryColor: #0D2C54;
+
+$white: #fff;
+$black: #000;
+$grey: #eee;
+$lightGrey: lighten($grey, 5%);
+
+/* --- Colours --- */
+
+
+/* --------------------------------*/
+
+/* --- Fonts --- */
+
+$primaryFont: 'Rubik';
+$secondaryFont: 'Rubik';
+
+/* --- Fonts --- */
+
+/* --------------------------------*/
+
+
+/* --- Media Querys --- */
+
+$largeMobile: "(min-width: 425px)";
+$small-tablet: "(min-width: 600px)";
+$tablet: "(min-width: 768px)";
+$laptop: "(min-width: 1024px)";
+$desktop: "(min-width: 1420px)";
+
+// example: @media #{$small-tablet} { }
+
+/* --- Media Querys --- */

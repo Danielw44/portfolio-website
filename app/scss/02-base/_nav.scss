@@ -1,0 +1,131 @@
+/* --- desktop nav --- */
+
+.nav-container{
+  @include display(flex);
+  @include justify-content(space-between);
+}
+
+.site-nav{
+  @include position(absolute);
+  width: 100%;
+  @include padding(20px);
+  z-index: 99;
+}
+.logo{
+  a{
+    text-decoration: none;
+  }
+}
+.site-nav__items{
+  padding: 20px;
+  background: $grey;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: 70px;
+
+  a{
+    color: $white;
+    margin: 7px 0;
+    text-decoration: none;
+    display: block;
+    font-family: $secondaryFont;
+  }
+
+
+  @media #{$laptop}{
+    padding: 0;
+    width: auto;
+    display: block !important;
+    position: static;
+    background: none;
+
+    a{
+      margin: 0 7px;
+      display: inline-block;
+    }
+  }
+}
+
+
+
+/* --- mobile nav --- */
+
+.mobile-nav {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 30px;
+    background: 0 0;
+    cursor: pointer;
+    border: 0;
+
+    @media #{$laptop}{
+      display: none;
+    }
+}
+
+.mobile-nav.open-nav{
+  z-index: 9;
+
+  .inner .icon-bar{
+    background: $white;
+  }
+}
+
+.mobile-nav:focus {
+    outline: 0
+}
+
+.mobile-nav .inner {
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    right: 0;
+    width: 20px;
+    height: 18px;
+    margin: -9px 0 0 -9px
+}
+
+.mobile-nav .inner .icon-bar {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    background: $white;
+    transition: all .3s ease-in-out
+}
+
+.mobile-nav .inner .icon-bar.top {
+    top: 0
+}
+
+.mobile-nav .inner .icon-bar.middle {
+    top: 8px
+}
+
+.mobile-nav .inner .icon-bar.bottom {
+    bottom: 0
+}
+
+.mobile-nav.open-nav .inner .icon-bar.middle {
+    opacity: 0
+}
+
+.mobile-nav.open-nav .inner .icon-bar.top {
+    top: 8px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.mobile-nav.open-nav .inner .icon-bar.bottom {
+    bottom: 8px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+}
