@@ -1,7 +1,8 @@
 (function($) {
   "use strict";
 
-
+    // Accepts any class name
+    var rellax = new Rellax('.rellax');
 
   // ======================================
   //    Smooth Scroll to element
@@ -36,6 +37,76 @@
     };
 });
 
+  //-------------------------------------START: Preloader-------------------------------------------//
+  $(document).ready(function(){
+    setTimeout(
+    function()
+    {
+      $(".loader").fadeOut("fast", function() {
+        $(this).addClass("loaded");
+      });
+    }, 2000);
+  });
+  //-------------------------------------END Preloader --------------------------------------------//
+
+  //-------------------------------------START Typed --------------------------------------------//
+    $(document).ready(function(){
+      setTimeout(
+        function()
+        {
+          $(".typing").typed({
+              strings: [" am a Web Developer.", " live in Manchester.", " work in a creative agency.", " love chocolate.", "'m tech crazy.", "'m Daniel Worthington."],
+              typeSpeed: 0
+          });
+        }, 2100);
+    });
+  //-------------------------------------END Typed ----------------------------------------------//
+
+  //-------------------------------------START Random Blocks --------------------------------------------//
+    $(document).ready(function(){
+      $(".blocks-green").children().each(function(){
+        $(this).css('left', Math.floor((Math.random() * $(window).width()) - 1));
+        $(this).css('top', Math.floor((Math.random() * $(window).height()) - 1));
+      })
+    });
+    $(document).ready(function(){
+      $(".blocks-yellow").children().each(function(){
+        $(this).css('left', Math.floor((Math.random() * $(window).width()) - 1));
+        $(this).css('top', Math.floor((Math.random() * $(window).height()) - 1));
+      })
+    });
+    $(document).ready(function(){
+      $(".blocks-red").children().each(function(){
+        $(this).css('left', Math.floor((Math.random() * $(window).width()) - 1));
+        $(this).css('top', Math.floor((Math.random() * $(window).height()) - 1));
+      })
+    });
+    $(document).ready(function(){
+      $(".blocks-lblue").children().each(function(){
+        $(this).css('left', Math.floor((Math.random() * $(window).width()) - 1));
+        $(this).css('top', Math.floor((Math.random() * $(window).height()) - 1));
+      })
+    });
+    $(document).ready(function(){
+      $(".blocks-dblue").children().each(function(){
+        $(this).css('left', Math.floor((Math.random() * $(window).width()) - 1));
+        $(this).css('top', Math.floor((Math.random() * $(window).height()) - 1));
+      })
+    });
+    $(document).ready(function(){
+      $(".blocks-orange").children().each(function(){
+        $(this).css('left', Math.floor((Math.random() * $(window).width()) - 1));
+        $(this).css('top', Math.floor((Math.random() * $(window).height()) - 1));
+      })
+    });
+    $(document).ready(function(){
+      $(".blocks-purple").children().each(function(){
+        $(this).css('left', Math.floor((Math.random() * $(window).width()) - 1));
+        $(this).css('top', Math.floor((Math.random() * $(window).height()) - 1));
+      })
+    });
+
+  //-------------------------------------END Random Blocks ----------------------------------------------//
 
   //------------------------------------- START: Mobile navigation setup ------------------------------------------------//
 

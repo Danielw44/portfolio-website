@@ -1,0 +1,168 @@
+.blocks{
+  width: 100vw;
+  height: 100vh;
+  @include position(absolute);
+}
+
+.blocks-green{
+  @include position(absolute);
+  width: inherit;
+  height: inherit;
+  .b-green{
+    @include background-image(url('../images/tetris/green.svg'));
+    @include position(absolute);
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+
+    // &:nth-of-type(1){
+    //   top: 80px;
+    //   left: 40px;
+    // }
+    //
+    // &:nth-of-type(2){
+    //   bottom: 200px;
+    //   left: 30px;
+    // }
+    // &:nth-of-type(3){
+    //   top: 210px;
+    //   right: 90px;
+    // }
+    // &:nth-of-type(4){
+    //   bottom: 70px;
+    //   right: 20px;
+    // }
+  }
+}
+
+.blocks-yellow{
+  @include position(absolute);
+  width: inherit;
+  height: inherit;
+  .b-yellow{
+    @include background-image(url('../images/tetris/yellow.svg'));
+    @include position(absolute);
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+
+    // &:nth-of-type(1){
+    //   top: 160px;
+    //   left: 20px;
+    // }
+    //
+    // &:nth-of-type(2){
+    //   bottom: 150px;
+    //   left: 80px;
+    // }
+    // &:nth-of-type(3){
+    //   top: 130px;
+    //   right: 25px;
+    // }
+    // &:nth-of-type(4){
+    //   bottom: 60px;
+    //   right: 100px;
+    // }
+  }
+}
+
+.blocks-red{
+  @include position(absolute);
+  width: inherit;
+  height: inherit;
+  .b-red{
+    @include background-image(url('../images/tetris/red.svg'));
+    @include position(absolute);
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+
+    // &:nth-of-type(1){
+    //   top: 230px;
+    //   left: 30px;
+    // }
+    //
+    // &:nth-of-type(2){
+    //   bottom: 80px;
+    //   left: 100px;
+    // }
+    // &:nth-of-type(3){
+    //   top: 100px;
+    //   right: 70px;
+    // }
+    // &:nth-of-type(4){
+    //   bottom: 250px;
+    //   right: 20px;
+    // }
+  }
+}
+
+.blocks-lblue{
+  @include position(absolute);
+  width: inherit;
+  height: inherit;
+  .b-lblue{
+    @include background-image(url('../images/tetris/lblue.svg'));
+    @include position(absolute);
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+
+    // &:nth-of-type(1){
+    //   top: 230px;
+    //   left: 30px;
+    // }
+    //
+    // &:nth-of-type(2){
+    //   bottom: 80px;
+    //   left: 100px;
+    // }
+    // &:nth-of-type(3){
+    //   top: 100px;
+    //   right: 70px;
+    // }
+    // &:nth-of-type(4){
+    //   bottom: 250px;
+    //   right: 20px;
+    // }
+  }
+}
+
+.blocks-dblue{
+  @include position(absolute);
+  width: inherit;
+  height: inherit;
+  .b-dblue{
+    @include background-image(url('../images/tetris/dblue.svg'));
+    @include position(absolute);
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.blocks-orange{
+  @include position(absolute);
+  width: inherit;
+  height: inherit;
+  .b-orange{
+    @include background-image(url('../images/tetris/orange.svg'));
+    @include position(absolute);
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.blocks-purple{
+  @include position(absolute);
+  width: inherit;
+  height: inherit;
+  .b-purple{
+    @include background-image(url('../images/tetris/purple.svg'));
+    @include position(absolute);
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+  }
+ }

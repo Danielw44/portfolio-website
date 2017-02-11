@@ -8,21 +8,34 @@
 .site-nav{
   @include position(absolute);
   width: 100%;
-  @include padding(20px);
-  z-index: 99;
+  @include padding(20px 30px 0px);
+  z-index: 3;
+
+  @media #{$tablet}{
+    @include padding(50px 40px 0px);
+  }
 }
 .logo{
   a{
     text-decoration: none;
+    img{
+      width: 50px;
+      height: 50px;
+    }
   }
 }
 .site-nav__items{
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
   padding: 20px;
-  background: $grey;
-  left: 0;
-  width: 100%;
+  background: $primaryColor;
+  height: 100vh;
+  width: 100vw;
   position: absolute;
-  top: 70px;
+  left: -30px;
+  top: -20px;
 
   a{
     color: $white;
@@ -30,8 +43,9 @@
     text-decoration: none;
     display: block;
     font-family: $secondaryFont;
+    font-size: 35px;
+    font-weight: 300;
   }
-
 
   @media #{$laptop}{
     padding: 0;
@@ -39,10 +53,12 @@
     display: block !important;
     position: static;
     background: none;
+    height: auto;
 
     a{
       margin: 0 7px;
       display: inline-block;
+      font-size: 20px;
     }
   }
 }
@@ -59,6 +75,7 @@
     background: 0 0;
     cursor: pointer;
     border: 0;
+    top: 10px;
 
     @media #{$laptop}{
       display: none;

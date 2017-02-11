@@ -6,19 +6,32 @@
 
 body,html{
   margin: 0;
+  overflow-x:hidden;
 }
 
 h1{
   font-family: $secondaryFont;
   @include margin(0);
   @include padding(0);
-  font-size: 80px;
+  font-size: 50px;
+  @media #{$tablet}{
+    font-size: 60px;
+  }
+  @media #{$laptop}{
+    font-size: 80px;
+  }
 }
 h2{
   font-family: $secondaryFont;
   @include margin(0);
   @include padding(0);
-  font-size: 40px;
+  font-size: 20px;
+  @media #{$tablet}{
+    font-size: 30px;
+  }
+  @media #{$laptop}{
+    font-size: 40px;
+  }
 }
 h3{
 

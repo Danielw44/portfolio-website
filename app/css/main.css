@@ -12,20 +12,41 @@
 
 body, html {
   margin: 0;
+  overflow-x: hidden;
 }
 
 h1 {
   font-family: "Rubik";
   margin: 0;
   padding: 0;
-  font-size: 80px;
+  font-size: 50px;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 60px;
+  }
+}
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 80px;
+  }
 }
 
 h2 {
   font-family: "Rubik";
   margin: 0;
   padding: 0;
-  font-size: 40px;
+  font-size: 20px;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 40px;
+  }
 }
 
 p {
@@ -70,21 +91,66 @@ p {
 .site-nav {
   position: absolute;
   width: 100%;
-  padding: 20px;
-  z-index: 99;
+  padding: 20px 30px 0;
+  z-index: 3;
+}
+@media (min-width: 768px) {
+  .site-nav {
+    padding: 50px 40px 0;
+  }
 }
 
 .logo a {
   text-decoration: none;
 }
+.logo a img {
+  width: 50px;
+  height: 50px;
+}
 
 .site-nav__items {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
   padding: 20px;
-  background: #eee;
-  left: 0;
-  width: 100%;
+  background: #343434;
+  height: 100vh;
+  width: 100vw;
   position: absolute;
-  top: 70px;
+  left: -30px;
+  top: -20px;
 }
 .site-nav__items a {
   color: #fff;
@@ -92,6 +158,8 @@ p {
   text-decoration: none;
   display: block;
   font-family: "Rubik";
+  font-size: 35px;
+  font-weight: 300;
 }
 @media (min-width: 1024px) {
   .site-nav__items {
@@ -100,10 +168,12 @@ p {
     display: block !important;
     position: static;
     background: none;
+    height: auto;
   }
   .site-nav__items a {
     margin: 0 7px;
     display: inline-block;
+    font-size: 20px;
   }
 }
 
@@ -116,6 +186,7 @@ p {
   background: 0 0;
   cursor: pointer;
   border: 0;
+  top: 10px;
 }
 @media (min-width: 1024px) {
   .mobile-nav {
@@ -215,6 +286,239 @@ p {
   src: url("/fonts/Rubik-900/Rubik-900.eot");
   src: url("/fonts/Rubik-900/Rubik-900.eot?#iefix") format("embedded-opentype"), local("Rubik Black"), local("Rubik-900"), url("/fonts/Rubik-900/Rubik-900.woff2") format("woff2"), url("/fonts/Rubik-900/Rubik-900.woff") format("woff"), url("/fonts/Rubik-900/Rubik-900.ttf") format("truetype"), url("/fonts/Rubik-900/Rubik-900.svg#Rubik") format("svg");
 }
+.loader {
+  height: 100%;
+  width: 100%;
+  background: #343434;
+  background: #343434;
+  position: absolute;
+  z-index: 4;
+}
+@media (max-width: 550px) {
+  .loader {
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
+  }
+}
+@media (max-width: 440px) {
+  .loader {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.loader .l_main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 172px;
+  height: 128px;
+  margin: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.loaded {
+  z-index: -1;
+}
+
+.l_square {
+  position: relative;
+}
+
+.l_square:nth-child(1) {
+  margin-left: 0px;
+}
+
+.l_square:nth-child(2) {
+  margin-left: 44px;
+}
+
+.l_square:nth-child(3) {
+  margin-left: 88px;
+}
+
+.l_square:nth-child(4) {
+  margin-left: 132px;
+}
+
+.l_square span {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  height: 36px;
+  width: 36px;
+  border-radius: 2px;
+  background-color: #FFFFFF;
+}
+
+.l_square span:nth-child(1) {
+  top: 0px;
+}
+
+.l_square span:nth-child(2) {
+  top: 44px;
+}
+
+.l_square span:nth-child(3) {
+  top: 88px;
+}
+
+.l_square:nth-child(1) span {
+  -webkit-animation: animsquare1 2s infinite ease-in;
+  animation: animsquare1 2s infinite ease-in;
+}
+
+.l_square:nth-child(2) span {
+  -webkit-animation: animsquare2 2s infinite ease-in;
+  animation: animsquare2 2s infinite ease-in;
+}
+
+.l_square:nth-child(3) span {
+  -webkit-animation: animsquare3 2s infinite ease-in;
+  animation: animsquare3 2s infinite ease-in;
+}
+
+.l_square:nth-child(4) span {
+  -webkit-animation: animsquare4 2s infinite ease-in;
+  animation: animsquare4 2s infinite ease-in;
+}
+
+.l_square span:nth-child(1) {
+  -webkit-animation-delay: 0.00s;
+  animation-delay: 0s;
+}
+
+.l_square span:nth-child(2) {
+  -webkit-animation-delay: 0.15s;
+  animation-delay: 0.15s;
+}
+
+.l_square span:nth-child(3) {
+  -webkit-animation-delay: 0.30s;
+  animation-delay: 0.3s;
+}
+
+@-webkit-keyframes animsquare1 {
+  0%,5%,95%,100% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  30%,70% {
+    -webkit-transform: translate(-40px, 0px) rotate(-90deg);
+    transform: translate(-40px, 0px) rotate(-90deg);
+  }
+}
+@keyframes animsquare1 {
+  0%,5%,95%,100% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  30%,70% {
+    -webkit-transform: translate(-40px, 0px) rotate(-90deg);
+    transform: translate(-40px, 0px) rotate(-90deg);
+  }
+}
+@-webkit-keyframes animsquare2 {
+  0%,10%,90%,100% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  35%,65% {
+    -webkit-transform: translate(-40px, 0px) rotate(-90deg);
+    transform: translate(-40px, 0px) rotate(-90deg);
+  }
+}
+@keyframes animsquare2 {
+  0%,10%,90%,100% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  35%,65% {
+    -webkit-transform: translate(-40px, 0px) rotate(-90deg);
+    transform: translate(-40px, 0px) rotate(-90deg);
+  }
+}
+@-webkit-keyframes animsquare3 {
+  0%,15%,85%,100% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  40%,60% {
+    -webkit-transform: translate(-40px, 0px) rotate(-90deg);
+    transform: translate(-40px, 0px) rotate(-90deg);
+  }
+}
+@keyframes animsquare3 {
+  0%,15%,85%,100% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  40%,60% {
+    -webkit-transform: translate(-40px, 0px) rotate(-90deg);
+    transform: translate(-40px, 0px) rotate(-90deg);
+  }
+}
+@-webkit-keyframes animsquare4 {
+  0%,20%,80%,100% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  45%,55% {
+    -webkit-transform: translate(-40px, 0px) rotate(-90deg);
+    transform: translate(-40px, 0px) rotate(-90deg);
+  }
+}
+@keyframes animsquare4 {
+  0%,20%,80%,100% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  45%,55% {
+    -webkit-transform: translate(-40px, 0px) rotate(-90deg);
+    transform: translate(-40px, 0px) rotate(-90deg);
+  }
+}
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 section.intro {
   background-color: #343434;
   height: 100vh;
@@ -248,4 +552,109 @@ section.intro {
 section.intro .intro-text {
   color: #fff;
   text-align: center;
+  z-index: 1;
+}
+
+.blocks {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+.blocks-green {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+.blocks-green .b-green {
+  background-image: url("../images/tetris/green.svg");
+  background-image: url("../images/tetris/green.svg");
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
+.blocks-yellow {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+.blocks-yellow .b-yellow {
+  background-image: url("../images/tetris/yellow.svg");
+  background-image: url("../images/tetris/yellow.svg");
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+.blocks-red {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+.blocks-red .b-red {
+  background-image: url("../images/tetris/red.svg");
+  background-image: url("../images/tetris/red.svg");
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
+.blocks-lblue {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+.blocks-lblue .b-lblue {
+  background-image: url("../images/tetris/lblue.svg");
+  background-image: url("../images/tetris/lblue.svg");
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
+.blocks-dblue {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+.blocks-dblue .b-dblue {
+  background-image: url("../images/tetris/dblue.svg");
+  background-image: url("../images/tetris/dblue.svg");
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
+.blocks-orange {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+.blocks-orange .b-orange {
+  background-image: url("../images/tetris/orange.svg");
+  background-image: url("../images/tetris/orange.svg");
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
+.blocks-purple {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+.blocks-purple .b-purple {
+  background-image: url("../images/tetris/purple.svg");
+  background-image: url("../images/tetris/purple.svg");
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
 }
