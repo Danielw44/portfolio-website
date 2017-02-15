@@ -1,8 +1,8 @@
 (function($) {
   "use strict";
 
-    // Accepts any class name
-    var rellax = new Rellax('.rellax');
+    // // Accepts any class name
+    // var rellax = new Rellax('.rellax');
 
   // ======================================
   //    Smooth Scroll to element
@@ -61,6 +61,20 @@
         }, 2100);
     });
   //-------------------------------------END Typed ----------------------------------------------//
+
+  //-------------------------------------START Slick --------------------------------------------//
+  $(document).ready(function(){
+      $('.experience').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        adaptiveHeight: true,
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 5000
+      });
+  });
+  //-------------------------------------END Slick ----------------------------------------------//
 
   //-------------------------------------START Random Blocks --------------------------------------------//
     $(document).ready(function(){
