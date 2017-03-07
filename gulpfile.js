@@ -52,9 +52,9 @@ var gulp = require('gulp'),
   gulp.task( 'upload', function () {
 
     var conn = ftp.create( {
-        host: 'danielworthington.co.uk',
-        user: 'daniel@danielworthington.co.uk',
-        pass: 'daniel_FTP!',
+        host: 'ftp.danielworthington.co.uk',
+        user: 'danielworthington.co.uk',
+        pass: 'Lucydano44!!',
         log:      util.log
     } );
 

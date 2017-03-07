@@ -1,5 +1,9 @@
-<?php include 'includes/header.php' ?>
-<?php include 'includes/preloader.php' ?>
+<?php
+  $path = $_SERVER['DOCUMENT_ROOT'].'/includes/'
+ ?>
+
+<?php include $path.'header.php' ?>
+<?php include $path.'preloader.php' ?>
   <div class="site-container">
     <section class="intro">
       <?php include 'includes/blocks.php' ?>
@@ -10,4 +14,4 @@
     </section>
   </div>
 
-<?php include 'includes/footer.php' ?>
+<?php include $path.'footer.php' ?>

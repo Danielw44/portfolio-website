@@ -1,5 +1,8 @@
-<?php include 'includes/header.php' ?>
-<?php include 'includes/preloader.php' ?>
+<?php
+   $path = $_SERVER['DOCUMENT_ROOT'].'/includes/';
+?>
+
+<?php include $path.'header.php' ?>
   <div class="site-container cv">
     <section class="cv-intro">
       <h1>Daniel Worthington</h1>
@@ -187,4 +190,4 @@
     </section>
   </div>
 
-<?php include 'includes/footer.php' ?>
+<?php include $path.'footer.php' ?>
